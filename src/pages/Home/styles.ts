@@ -7,7 +7,7 @@ export const PageContent = styled.SafeAreaView`
 
 export const Title = styled.Text`
   color:  ${({ theme }) => theme.colors.text};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fontSizes.body}px;
   font-family: SF Pro Display;
   font-weight: 500;
   margin: 24px;

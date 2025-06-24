@@ -7,8 +7,9 @@ export const theme = {
     text: '#999999',
   },
   fontSizes: {
-    title: 24,
+    title: 25,
     subtitle: 16,
     body: 14,
-  },
+    text: 12
+  }
 };

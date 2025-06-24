@@ -23,9 +23,9 @@ export const Content = styled.TouchableOpacity<{marginBottom?: boolean}>`
   })}
 `;
 
-export const Title = styled.Text<{margin?: boolean}>`
+export const Title = styled.Text<{margin?: boolean, hour?: boolean}>`
   color: ${({ theme }) => theme.colors.text};
-  font-size: 14px;
+  font-size:  ${({ theme , hour}) => hour ?  theme.fontSizes.body : theme.fontSizes.text}px;
   font-family: SF Pro Display;
   font-weight: 500;
     margin: ${(props) => props.margin ? '16.03px 16px 11.97px':  '0 6px 0'  };
@@ -35,7 +35,7 @@ export const Event = styled.Text`
   color:  ${({ theme }) => theme.colors.default};
   font-family: SF Pro Display;
   font-weight: 500;
-  font-size: 16px;
+  font-size:  ${({ theme }) => theme.fontSizes.subtitle}px;
   margin: 0 16px;
 `;
 
@@ -50,7 +50,7 @@ export const StyledDate = styled.Text`
   color: ${({ theme }) => theme.colors.text};
   font-family: SF Pro Display;
   font-weight: 500;
-  font-size: 12px;
+  font-size:  ${({ theme }) => theme.fontSizes.text}px;
   margin: 0 16px 16px;
 `;
 

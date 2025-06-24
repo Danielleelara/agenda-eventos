@@ -15,7 +15,7 @@ export const Title = styled.Text`
 
 export const Label = styled.Text<{margin?: boolean}>`
   color: ${({ theme }) => theme.colors.primary};
-  font-size: 14px;
+  font-size: ${({ theme }) => theme.fontSizes.body}px;
   font-family: SF Pro Display;
   margin: ${(props) => props.margin ? '17px 24px 8px':  '0 24px 8px'   };
 `;
@@ -43,7 +43,7 @@ position: absolute;
 
 export const LabelButton = styled.Text`
   color: ${({ theme }) => theme.colors.background};
-  font-size: 16px;
+  font-size:  ${({ theme }) => theme.fontSizes.subtitle}px;
   font-family: SF Pro Display;
   font-weight: bold;
     border-radius: 3px;

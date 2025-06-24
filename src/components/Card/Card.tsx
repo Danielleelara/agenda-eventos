@@ -29,7 +29,7 @@ const Card = ({image, title, hour, startDate, marginBottom}: CardProps) => {
         <S.Event>{title}</S.Event>
         <S.HourContent>
           <Ionicons name="stopwatch-outline" size={24} color={theme.colors.text} />
-          <S.Title>{hour}</S.Title>
+          <S.Title hour>{hour}</S.Title>
         </S.HourContent>
         <S.StyledDate>{startDate}</S.StyledDate>
       </S.ContentCard>
