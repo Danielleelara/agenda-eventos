@@ -3,17 +3,16 @@ import styled from "styled-components/native";
 
 export const Content = styled.TouchableOpacity<{marginBottom?: boolean}>`
   margin: ${(props)=>  props.marginBottom ? '0 24px 24px': '0 24px'} ;
-  border: 2px solid #733dbe1a;
   border-radius: 5px;
   min-height: 124px;
-  background: #FFFFFF;
+  background: ${({ theme }) => theme.colors.background};
   border-left-width: 4px;
-  border-left-color: #733dbe;
+  border-left-color:${({ theme }) => theme.colors.text};
   flex-direction: row;
 
   ${Platform.select({
     ios: `
-      shadow-color: #733DBE;
+      shadow-color: theme.colors.text;
       shadow-offset: 0px 4px;
       shadow-opacity: 0.2;
       shadow-radius: 4.65px;
@@ -25,7 +24,7 @@ export const Content = styled.TouchableOpacity<{marginBottom?: boolean}>`
 `;
 
 export const Title = styled.Text<{margin?: boolean}>`
-  color: #999999;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 14px;
   font-family: SF Pro Display;
   font-weight: 500;
@@ -33,7 +32,7 @@ export const Title = styled.Text<{margin?: boolean}>`
 `;
 
 export const Event = styled.Text`
-  color: #333333;
+  color:  ${({ theme }) => theme.colors.default};
   font-family: SF Pro Display;
   font-weight: 500;
   font-size: 16px;
@@ -48,7 +47,7 @@ export const HourContent = styled.View`
 `;
 
 export const StyledDate = styled.Text`
-  color: #999999;
+  color: ${({ theme }) => theme.colors.text};
   font-family: SF Pro Display;
   font-weight: 500;
   font-size: 12px;

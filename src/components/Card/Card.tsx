@@ -1,6 +1,7 @@
 import React, { Image } from "react-native";
 import * as S from "./styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { theme } from "../../styles/theme";
 
 type CardProps = {
   image?: string,
@@ -27,7 +28,7 @@ const Card = ({image, title, hour, startDate, marginBottom}: CardProps) => {
         <S.Title margin>EVENTOS</S.Title>
         <S.Event>{title}</S.Event>
         <S.HourContent>
-          <Ionicons name="stopwatch-outline" size={24} color="#999999" />
+          <Ionicons name="stopwatch-outline" size={24} color={theme.colors.text} />
           <S.Title>{hour}</S.Title>
         </S.HourContent>
         <S.StyledDate>{startDate}</S.StyledDate>

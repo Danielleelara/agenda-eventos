@@ -6,7 +6,7 @@ export const PageContent = styled(SafeAreaView)`
 `;
 
 export const Title = styled.Text`
-  color: #33333;
+  color: ${({ theme }) => theme.colors.default};
   font-size: 25px;
   font-family: SF Pro Display;
   font-weight: bold;
@@ -14,14 +14,14 @@ export const Title = styled.Text`
 `;
 
 export const Label = styled.Text<{margin?: boolean}>`
-  color: #666666;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 14px;
   font-family: SF Pro Display;
   margin: ${(props) => props.margin ? '17px 24px 8px':  '0 24px 8px'   };
 `;
 
 export const InputComponent = styled.TextInput`
-  border: 1px solid #733dbe;
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
   margin-bottom: 8px;
   margin: 0 24px;
   height: 50px;
@@ -30,7 +30,7 @@ export const InputComponent = styled.TextInput`
 `;
 
 export const ButtonComponent = styled.TouchableOpacity` 
-  background-color: #733DBE;
+  background-color:${({ theme }) => theme.colors.secondary};
   height: 50px;
   border-radius: 3px;
   justify-content: center;
@@ -42,7 +42,7 @@ position: absolute;
 `;
 
 export const LabelButton = styled.Text`
-  color: #FFFFFF;
+  color: ${({ theme }) => theme.colors.background};
   font-size: 16px;
   font-family: SF Pro Display;
   font-weight: bold;
