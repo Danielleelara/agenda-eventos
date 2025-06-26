@@ -24,6 +24,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1192c52e-36fe-4667-a0d0-79ae2a14abd0"
+      }
+    },
+    "owner": "danielleelara"
   }
 }
