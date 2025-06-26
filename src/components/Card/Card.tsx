@@ -3,17 +3,10 @@ import * as S from "./styles";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { theme } from "../../styles/theme";
 
-type CardProps = {
-  image?: string,
-  title: string,
-  hour: string,
-  startDate: string,
-  marginBottom: boolean
-}
 
-const Card = ({image, title, hour, startDate, marginBottom}: CardProps) => {
+const Card = ({image, title, hour, startDate, marginBottom, onPress}: CardProps) => {
   return (
-    <S.Content marginBottom={marginBottom}>
+    <S.Content marginBottom={marginBottom} onPress={onPress}>
       {image ?
       <S.ContentImage >
         <Image

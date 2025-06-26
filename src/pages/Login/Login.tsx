@@ -15,14 +15,21 @@ const Login = () => {
 
   const onLogin = async () => {
     Keyboard.dismiss();
+
+    if(!user.email || !user.password){
+      return Alert.alert("Digite email e senha!");
+    }
+    
     try {
       const { email, password } = user;
       const { token } = await signIn({ email, password });
       if (token) {
-        navigation.navigate("Eventos");
+        navigation.navigate("events");
       }
     } catch (error) {
       Alert.alert("Erro ao logar. Por favor confirme seu login e senha!");
+    } finally {
+      setUser({email: '', password: ''})
     }
   };
 
