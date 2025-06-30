@@ -17,8 +17,10 @@ Este é um projeto front-end desenvolvido com React Native, que simula uma inter
 
 ## 🛠️ Tecnologias e Ferramentas
 
-- [React Native](https://reactjs.org/)
-- [Expo](https://vitest.dev/)
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [Styled Components](https://styled-components.com/)
 
 ## 📦 Instalação e uso
 
