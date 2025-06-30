@@ -10,9 +10,9 @@ export const ImageView = styled.View`
   width: 100%;
 `;
 
-export const Container = styled.View<{hasImage?: boolean}>`
-  position: ${(props) => props.hasImage ? 'absolute' : '' };
-  margin-top: ${(props) => props.hasImage ? '160px' : '20px' };
+export const Container = styled.View<{ hasImage?: boolean }>`
+  position: ${(props) => (props.hasImage ? "absolute" : "")};
+  margin-top: ${(props) => (props.hasImage ? "160px" : "20px")};
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
   border-radius: 20px 20px;
@@ -23,7 +23,7 @@ export const Container = styled.View<{hasImage?: boolean}>`
 export const DateView = styled.View`
   height: 60px;
   width: 60px;
-  background: #E4DFEB;
+  background: ${({ theme }) => theme.colors.background1};
   border-radius: 5px;
   position: relative;
   justify-content: center;
@@ -31,15 +31,15 @@ export const DateView = styled.View`
 `;
 
 export const Day = styled.Text`
- color: ${({ theme }) => theme.colors.secondary};
- font-size: ${({ theme }) => theme.fontSizes.title2}px;
- font-weight: bold;
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: ${({ theme }) => theme.fontSizes.title2}px;
+  font-weight: bold;
 `;
 
 export const Month = styled.Text`
- color: ${({ theme }) => theme.colors.secondary};
- font-size: ${({ theme }) => theme.fontSizes.body}px;
- text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.secondary};
+  font-size: ${({ theme }) => theme.fontSizes.body}px;
+  text-transform: uppercase;
 `;
 
 export const Title = styled.Text`

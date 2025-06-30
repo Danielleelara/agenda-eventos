@@ -15,11 +15,6 @@ const Login = () => {
 
   const onLogin = async () => {
     Keyboard.dismiss();
-
-    if(!user.email || !user.password){
-      return Alert.alert("Digite email e senha!");
-    }
-    
     try {
       const { email, password } = user;
       const { token } = await signIn({ email, password });
@@ -49,7 +44,7 @@ const Login = () => {
         onChangeText={(value) => setUser({ ...user, password: value })}
         onSubmitEditing={onLogin}
       ></S.InputComponent>
-      <S.ButtonComponent onPress={onLogin}>
+      <S.ButtonComponent onPress={onLogin} disabled={!user.email || !user.password}>
         <S.LabelButton>Entrar</S.LabelButton>
       </S.ButtonComponent>
     </S.PageContent>

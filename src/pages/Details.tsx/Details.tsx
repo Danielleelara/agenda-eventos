@@ -10,37 +10,36 @@ const Details = () => {
   const { state } = route.params as { state: EventA };
 
   const day = new Date(state.startAt).getDate();
-  const month = new Date(state.startAt)
-   const formattedMonth = month.toLocaleDateString("pt-BR", { month: 'short' });
+  const month = new Date(state.startAt);
+  const formattedMonth = month.toLocaleDateString("pt-BR", { month: "short" });
 
   return (
     <S.PageContent>
-      {state.image ? 
-      
-      <S.ImageView>
-        <Image src={state.image} height={263} borderRadius={5} />
-      </S.ImageView> : null
-    }
+      {state.image ? (
+        <S.ImageView>
+          <Image src={state.image} height={263} borderRadius={5} />
+        </S.ImageView>
+      ) : null}
       <S.Container hasImage={!!state.image}>
         <View>
           <S.DateView>
             <S.Day>{day}</S.Day>
-            <S.Month>{formattedMonth.replace('.', '')}</S.Month>
+            <S.Month>{formattedMonth.replace(".", "")}</S.Month>
           </S.DateView>
         </View>
-          <S.Title>{state.title}</S.Title>
-            </S.Container>
-        <View>
-          <S.HourContent>
-            <Ionicons
-              name="stopwatch-outline"
-              size={24}
-              color={theme.colors.text}
-            />
-            <S.Hour>{DateFormatter(state.startAt, false, true)}</S.Hour>
-          </S.HourContent>
-          <S.Description>{state.description}</S.Description>
-        </View>
+        <S.Title>{state.title}</S.Title>
+      </S.Container>
+      <View>
+        <S.HourContent>
+          <Ionicons
+            name="stopwatch-outline"
+            size={24}
+            color={theme.colors.text}
+          />
+          <S.Hour>{DateFormatter(state.startAt, false, true)}</S.Hour>
+        </S.HourContent>
+        <S.Description>{state.description}</S.Description>
+      </View>
     </S.PageContent>
   );
 };
