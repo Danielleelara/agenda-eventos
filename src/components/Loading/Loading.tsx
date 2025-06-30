@@ -4,7 +4,7 @@ import * as S from "./styles";
 
 const Loading = () => {
   return (
-    <S.Container>
+    <S.Container testID="loading-test">
       <ActivityIndicator size="large" color={theme.colors.default} />
     </S.Container>
   );
