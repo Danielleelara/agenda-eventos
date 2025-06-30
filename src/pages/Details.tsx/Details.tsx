@@ -1,5 +1,5 @@
 import { useRoute } from "@react-navigation/native";
-import { Image, Text, View } from "react-native";
+import { Image, View } from "react-native";
 import * as S from "./styles";
 import { theme } from "../../styles/theme";
 import Ionicons from "@expo/vector-icons/Ionicons";

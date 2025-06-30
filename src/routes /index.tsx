@@ -17,6 +17,10 @@ export default function Routes() {
         initialRouteName="events"
         screenOptions={{
           headerTitleAlign: "left",
+          headerTitleStyle: {
+            fontSize: theme.fontSizes.headerTitle,
+            color: theme.colors.default,
+          },
         }}
       >
         <Stack.Screen
