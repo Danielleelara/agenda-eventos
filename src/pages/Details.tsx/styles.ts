@@ -10,12 +10,11 @@ export const ImageView = styled.View`
   width: 100%;
 `;
 
-export const Container = styled.View`
-  position: absolute;
-  margin-top: 160px;
+export const Container = styled.View<{hasImage?: boolean}>`
+  position: ${(props) => props.hasImage ? 'absolute' : '' };
+  margin-top: ${(props) => props.hasImage ? '160px' : '20px' };
   width: 100%;
   background: ${({ theme }) => theme.colors.background};
-  height: 100%;
   border-radius: 20px 20px;
   padding: 32px;
   flex-direction: row;
@@ -24,16 +23,23 @@ export const Container = styled.View`
 export const DateView = styled.View`
   height: 60px;
   width: 60px;
-  background: ${({ theme }) => theme.colors.secondary};
+  background: #E4DFEB;
   border-radius: 5px;
   position: relative;
   justify-content: center;
   align-items: center;
 `;
 
-export const Date = styled.Text`
- color: ${({ theme }) => theme.colors.default};
-  font-size: ${({ theme }) => theme.fontSizes.title2}px;
+export const Day = styled.Text`
+ color: ${({ theme }) => theme.colors.secondary};
+ font-size: ${({ theme }) => theme.fontSizes.title2}px;
+ font-weight: bold;
+`;
+
+export const Month = styled.Text`
+ color: ${({ theme }) => theme.colors.secondary};
+ font-size: ${({ theme }) => theme.fontSizes.body}px;
+ text-transform: uppercase;
 `;
 
 export const Title = styled.Text`

@@ -21,11 +21,11 @@ const Details = () => {
         <Image src={state.image} height={263} borderRadius={5} />
       </S.ImageView> : null
     }
-      <S.Container>
+      <S.Container hasImage={!!state.image}>
         <View>
           <S.DateView>
-            <S.Date>{day}</S.Date>
-            <S.Date>{formattedMonth.replace('.', '')}</S.Date>
+            <S.Day>{day}</S.Day>
+            <S.Month>{formattedMonth.replace('.', '')}</S.Month>
           </S.DateView>
         </View>
           <S.Title>{state.title}</S.Title>
