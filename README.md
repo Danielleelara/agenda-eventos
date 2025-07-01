@@ -28,8 +28,8 @@ Clone o projeto e instale as dependências:
 
 ```bash
 
-git clone https://github.com/Danielleelara/agenda-edu
-cd agenda-edu
+git clone https://github.com/Danielleelara/agenda-eventos.git
+cd agenda-eventos
 yarn install
 
 Para iniciar o projeto localmente:

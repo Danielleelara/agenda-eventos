@@ -29,8 +29,8 @@ export const InputComponent = styled.TextInput`
   padding: 13px 20px;
 `;
 
-export const ButtonComponent = styled.TouchableOpacity`
-  background-color: ${({ theme }) => theme.colors.secondary};
+export const ButtonComponent = styled.TouchableOpacity<{disabled: boolean}>`
+  background-color: ${({ theme, disabled }) => disabled ? theme.colors.border : theme.colors.secondary};
   height: 50px;
   border-radius: 3px;
   justify-content: center;

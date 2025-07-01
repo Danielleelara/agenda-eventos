@@ -14,7 +14,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="events"
+        initialRouteName="login"
         screenOptions={{
           headerTitleAlign: "left",
           headerTitleStyle: {
