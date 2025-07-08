@@ -1,6 +1,6 @@
 import React, { Alert, Keyboard } from "react-native";
 import * as S from "./styles";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { signIn } from "../../services/login";
 import { ParamListBase, useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
@@ -44,14 +44,14 @@ const Login = () => {
             placeholder="marcos.oliveira@agendae"
             value={user.email}
             onChangeText={(value) => setUser({ ...user, email: value })}
-          ></S.InputComponent>
+          />
           <S.Label margin>Senha</S.Label>
           <S.InputComponent
             placeholder="******"
             value={user.password}
             onChangeText={(value) => setUser({ ...user, password: value })}
             onSubmitEditing={onLogin}
-          ></S.InputComponent>
+          />
           <S.ButtonComponent
             onPress={onLogin}
             disabled={!user.email || !user.password}

@@ -30,7 +30,11 @@ export default function Routes() {
         />
         <Stack.Screen
           name="events"
-          options={{ title: "Eventos" }}
+          options={{ title: "Eventos", 
+            headerBackTitle: '',
+            headerLeft: () => null,
+            gestureEnabled: false,
+           }}
           component={Home}
         />
         <Stack.Screen
