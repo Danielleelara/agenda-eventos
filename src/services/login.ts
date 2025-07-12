@@ -9,7 +9,7 @@ export const signIn = async ({
 }: Request): Promise<{ token: string }> => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (email !== "student@ae.com" || password != "123456") {
+      if (email !== "aluno@ds.com" || password != "123456") {
         return reject(new Error("Usuário inválido"));
       }
       resolve({
